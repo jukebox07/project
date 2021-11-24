@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="this.js" type="module"></script> -->
+  </head>
+  <body>
+    <form action="" class="form-group w-50 m-5">
+      <input
+        type="text"
+        placeholder="enter your email"
+        id="phone"
+        class="form-control"
+        oninput="details(this)"
+      />
+      <input
+        type="text"
+        placeholder="enter your password"
+        id="email"
+        class="form-control"
+        oninput="details(this)"
+      />
+      <button type="button" class="btn-success form-control" onclick="login()">
+        Login
+      </button>
+      <button id="now">PLAY</button>
+      <button id="now">PLAY</button>
+      <button id="now">PLAY</button>
+      <button id="now">PLAY</button>
+
+      <div id="goat"></div>
+    </form>
+  </body>
+  <canvas
+    id="man"
+    width="700"
+    height="400"
+    style="border: 2px solid magenta"
+  ></canvas>
+  <button onclick="thick()">line 1</button>
+  <button onclick="thicker()">Line 2</button>
+  <button onclick="thickest()">Line 3</button>
+  <h1>header 1 <button>1</button></h1>
+  <h1>header 2 <button>2</button></h1>
+  <h1>header 3 <button>3</button></h1>
+  <h1>header 4 <button>4</button></h1>
+</html>
+<script>
+  // $(function () {
+  //   alert("going");
+  console.log($("#email").val(67899));
+  console.log($("#goat").html("GREAT"));
+  console.log($("#goat").attr("id", "hen"));
+  //   // console.log($("#goat"));
+  //   // console.log($("#email").prop("type", "password"));
+  //   // $("#email").css({ background: "blue", color: "yellow" });
+  //   // $("#now").click(function () {
+  //   //   $("#now").addClass("btn btn-danger");
+  //   // });
+  //   // $("#now").click(function () {
+  //   //   $("#now").toggleClass("btn btn-warning");
+  //   // });
+  //   // $("button").on("click", function () {
+  //   //   $(this).toggleClass("btn btn-primary");
+  //   // });
+  //   // $("button").on("click", function () {
+  //   //   $(this).closest("h1").remove();
+  //   // });
+  //   // $("button").on("click", function () {
+  //   //   $(this).closest("h1").next("h1").remove();
+  //   // });
+  //   // $("button").on("click", function () {
+  //   //   $(this).closest("h1").nextAll("h1").remove();
+  //   // });
+  //   // $("button").on("click", function () {
+  //   //   $(this).closest("h1").prev("h1").remove();
+  //   // });
+  //   $("button").on("click", function () {
+  //     $(this).closest("h1").prevAll("h1").remove();
+  //   });
+  // });
+  // let password, phone, phoneCheck, passwordCheck;
+  // function details(params) {
+  //   if (params.id == "phone") {
+  //     phone = params.value;
+  //     console.log(phone);
+  //   } else {
+  //     password = params.value;
+  //     console.log(password);
+  //   }
+  // }
+  // function login(params) {
+  //   let newphone = /[+]{1}[0-9]{1,3}[0-9]{10}/;
+  //   phoneCheck = newphone.test(phone);
+  //   let newpass = /[a-zA-Z0-9]{7}[@#$%^&*]{1}/;
+  //   passwordCheck = newpass.test(password);
+  //   if (phoneCheck && passwordCheck) {
+  //     console.log("welcome");
+  //   } else {
+  //     console.log("check your login details");
+  //     console.log(phoneCheck);
+  //     console.log(passwrodCheck);
+  //   }
+  // }
+  let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      return resolve("50");
+    }, 1000);
+  });
+
+  async function jug(params) {
+    console.log(12345);
+    let b = 0;
+    b = await p;
+    console.log(b);
+  }
+
+  jug();
+  // let ar = [3, 4, 6, 10, 9, 7, 8];
+  // let b = [];
+  // for (let index = 0; index <= 5; index++) {
+  //   let rand = Math.floor(Math.random() * ar.length);
+  //   b.push(ar[rand]);
+  //   console.log(b);
+  // }
+  // function change(params) {
+  //   let m = document.getElementById("now").innerHTML;
+  //   now.innerHTML = `PAUSE`;
+  // }
+  // setInterval(() => {
+  //   change();
+  // }, 3000);
+
+  // let x, y;
+  // let x2, y2;
+  // let canDraw = false;
+  // man.onmousedown = function (e) {
+  //   canDraw = true;
+  //   x = e.offsetX;
+  //   y = e.offsetY;
+  // };
+  // man.onmousemove = function (e) {
+  //   if (canDraw) {
+  //     x2 = e.offsetX;
+  //     y2 = e.offsetY;
+  //     draw();
+  //     x = e.offsetX;
+  //     y = e.offsetY;
+  //   }
+  // };
+  // man.onmouseup = function (e) {
+  //   canDraw = false;
+  // };
+  // function draw() {
+  //   let man = document.getElementById("man");
+  //   let ctx = man.getContext("2d");
+  //   ctx.fillStyle = "orange";
+  //   ctx.fillRect(70, 0, 500, 1000);
+
+  //   ctx.moveTo(x, y);
+  //   ctx.lineTo(x2, y2);
+  //   ctx.stroke();
+  // }
+  // draw();
+  // function thick(params) {
+  //   let ctx = man.getContext("2d");
+  //   draw();
+  //   ctx.lineWidth = "5";
+  //   ctx.lineSkew = "-";
+  // }
+</script>

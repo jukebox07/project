@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    button {
+      border: 1px solid red;
+      height: 70px;
+      width: 70px;
+      border-radius: 10%;
+      margin: 10px;
+    }
+    .ope {
+      border: 3px solid magenta;
+    }
+    div {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <div style="width: fit-content" class="ope">
+      <div style="width: 100%; height: 50px" id="you"></div>
+      <div style="width: 100%; height: 50px" id="me"></div>
+
+      <!-- <input type="number" style="width: 97.8%; height: 30px" id="you" /> -->
+      <!-- <input type="text" style="width: 97.8%; height: 30px" id="me" /> -->
+      <main style="background-color: green">
+        <button onclick="integers('1')"><h1>1</h1></button>
+        <button onclick="integers('2')"><h1>2</h1></button>
+        <button onclick="integers('3')"><h1>3</h1></button>
+        <button onclick="gizzy('+')"><h1>+</h1></button>
+      </main>
+      <main style="background-color: green">
+        <button onclick="integers('4')"><h1>4</h1></button>
+        <button onclick="integers('5')"><h1>5</h1></button>
+        <button onclick="integers('6')"><h1>6</h1></button>
+        <button onclick="gizzy('-')"><h1>-</h1></button>
+      </main>
+      <main style="background-color: green">
+        <button onclick="integers('7')"><h1>7</h1></button>
+        <button onclick="integers('8')"><h1>8</h1></button>
+        <button onclick="integers('9')"><h1>9</h1></button>
+        <button onclick="gizzy('*')"><h1>x</h1></button>
+      </main>
+      <main style="background-color: green">
+        <button onclick="integers('0')"><h1>0</h1></button>
+        <button onclick="gizzy('.')"><h1>.</h1></button>
+        <button onclick="gizzy('=')"><h1>=</h1></button>
+        <button onclick="gizzy('/')"><h1>/</h1></button>
+      </main>
+    </div>
+  </body>
+</html>
+<script>
+  params = false;
+  let sum = (a, b) => a + b;
+  let subtract = (a, b) => a - b;
+  let multiply = (a, b) => a * b;
+  let divide = (a, b) => a / b;
+  function integers(params) {
+    document.getElementById("you").innerHTML += params;
+  }
+
+  function display(params) {
+    // integers();
+  }
+
+  function gizzy(params) {
+    // params = true;
+  }
+  //   integers();
+  function del(params) {}
+</script>

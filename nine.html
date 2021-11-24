@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Hello Fellas
+    <div id="typing" class="typing" style="color: red"></div>
+  </body>
+</html>
+<script>
+  // var arr = ['Tomi', 'Vic','Faith','Wunmi','Bola','Sola'];
+  // for(var i = arr.length-1; i>=arr.length-arr.length;i--){
+  //     console.log(arr[i])
+  // }
+  var typeString = [
+    "My name is Adewumi Opeyemi",
+    "I study at SQI Ibadan Branch",
+    "The name of my Instructor is Dev.Tzee",
+  ];
+
+  var i = 0;
+  var count = 0;
+  var selectedText = "";
+  var text = "";
+
+  (function type() {
+    if (count == typeString.length) {
+      count = 0;
+    }
+    selectedText = typeString[count];
+    text = selectedText.substring(0, i++);
+
+    document.getElementById("typing").innerHTML = text;
+    if (text.length === selectedText.length) {
+      // text.length.substring(0, text.length++);
+      count++;
+      i = 0;
+    }
+
+    setTimeout(type, 100);
+  })();
+  function del(params) {}
+</script>

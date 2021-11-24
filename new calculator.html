@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<style>
+			.seebody {
+				width: 27%;
+				height: 500px;
+				background-color: lightblue;
+				position: relative;
+				margin-top: 30px;
+				left: 35px;
+				padding: 5px;
+				color: black;
+				border: 1px solid black;
+			}
+			.cal {
+				margin-top: 0px;
+				width: 310px;
+				height: 80px;
+				border: 4px solid white;
+				background-color: transparent;
+			}
+			.she {
+				margin-top: -30px;
+			}
+			.m {
+				width: 45px;
+				height: 30px;
+				background-color: white;
+				margin-top: 35px;
+				margin-left: 5px;
+			}
+			.m:hover {
+				background-color: lightblue;
+			}
+			.screen1 {
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: wrap;
+			}
+			.but {
+				width: 70px;
+				height: 40px;
+				background-color: lightcoral;
+				margin-top: 5px;
+				color: black;
+				font-weight: bold;
+			}
+			.but:hover {
+				background-color: lightcyan;
+			}
+			.xtime:hover {
+				background-color: red;
+			}
+			.xmin:hover {
+				background-color: blue;
+			}
+			.butt {
+				width: 70px;
+				height: 40px;
+				border: none;
+				outline: none;
+				background-color: lightpink;
+			}
+			.butt:hover {
+				background-color: yellow;
+			}
+			@media (max-width: 760px) {
+				.seebody {
+					width: 100%;
+					margin-left: -130px;
+					top: -30px;
+				}
+			}
+			.xclock {
+				margin-left: -80px;
+			}
+			.xtime {
+				margin-left: -80px;
+			}
+		</style>
+		<div class="seebody">
+			<div
+				class="df1 d-flex justify-content-between"
+				style="margin-top: -5px"
+			>
+				<div style="font-weight: bold; color: brown">
+					<p style="font-size: 12px">calculator</p>
+				</div>
+				<div class="her" style="color: brown">
+					<i class="fa fa-minus fa-sm xmin"></i>
+					<i class="fa fa-square-o fa-sm xmin"></i>
+					<i class="fa fa-times fa-sm xmin"></i>
+				</div>
+			</div>
+			<div class="d" style="display: flex; margin-top: -4px">
+				<div class="joy">
+					<h5 class="text-dark">
+						<i class="fa fa-bars"></i
+						><span style="color: black">standard</span>
+						<i class="fa fa-edit"></i>
+					</h5>
+				</div>
+				<div>
+					<i
+						class="fa fa-clock-o text-dark"
+						style="font-weight: bold"
+					></i>
+				</div>
+			</div>
+			<div class="cal">
+				<div>
+					<div id="screen1" style="font-weight: bold"></div>
+					<div id="screen2" style="padding-left: 3px"></div>
+				</div>
+
+				<h3
+					id="result"
+					style="padding-left: 0px; color: black"
+				></h3>
+			</div>
+			<div class="she">
+				<div style="display: flex">
+					<button class="m" id="mcc" value="MC">MC</button>
+					<button class="m" id="mr" value="MR">MR</button>
+					<button class="m" id="mm" value="M+">M+</button>
+					<button class="m" id="m" value="M-">M-</button>
+					<button class="m" id="alp" value="MS">MS</button>
+					<button class="m" id="alh" value="m">M</button>
+					<!-- <button colspan="3"><input type="text" id="edu"/></button> -->
+				</div>
+				<div class="wee">
+					<button class="but">%</button>
+					<button class="but">CE</button>
+					<button class="but" onclick="clearScreen()">C</button>
+					<button class="but">*</button>
+					<button class="but">(1/X)</button>
+
+					<button class="but" onclick="operator('sqr')">
+						<sub>x</sub>2
+					</button>
+					<button class="but" onclick="operator('2')">
+						2/x
+					</button>
+					<button
+						class="but"
+						id="division"
+						onclick="operator('/')"
+					>
+						/
+					</button>
+					<button class="but" id="seven" onclick="number(7)">
+						7
+					</button>
+					<button class="but" id="eight" onclick="number(8)">
+						8
+					</button>
+					<button class="but" id="nine" onclick="number(9)">
+						9
+					</button>
+					<button
+						class="but"
+						id="multiply"
+						onclick="operator('*')"
+					>
+						*
+					</button>
+					<button class="but" id="four" onclick="number(4)">
+						4
+					</button>
+					<button class="but" id="five" onclick="number(5)">
+						5
+					</button>
+					<button class="but" id="six" onclick="number(6)">
+						6
+					</button>
+					<button
+						class="but"
+						id="subtraction"
+						onclick="operator('-')"
+					>
+						-
+					</button>
+					<button class="but" id="one" onclick="number(1)">
+						1
+					</button>
+					<button class="but" id="two" onclick="number(2)">
+						2
+					</button>
+					<button class="but" id="three" onclick="number(3)">
+						3
+					</button>
+					<button
+						class="but"
+						id="addition"
+						onclick="operator('+')"
+					>
+						+
+					</button>
+					<button class="but" onclick="operator('+/-')">
+						+/-
+					</button>
+					<button class="but" id="zero" onclick="number(0)">
+						0
+					</button>
+					<button class="but" id="dot" onclick="operator('.')">
+						.
+					</button>
+					<button class="butt" id="equalto" onclick="result()">
+						=
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	let firstnum;
+	let firstnumber;
+	let secondnumber;
+	let signs;
+	let operand;
+	let total;
+
+	function number(num) {
+		document.getElementById("screen1").innerHTML += num;
+	}
+	// function addition() {
+	//     firstnum = Number(screen1.innerHTML);
+	//     console.log(firstnum);
+	//   let sign="+"
+	//     screen1.innerHTML= null;
+	//     screen2.innerHTML= `${a} + `;
+
+	// }
+	// function result() {
+	//     b = Number(screen1.innerHTML);
+	//     screen2.innerHTML=null;
+	//     screen1.innerHTML = a + b;
+	//     console.log(b);
+	//     console.log(a);
+
+	// }
+	function operator(signs) {
+		firstnum = Number(screen1.innerHTML);
+		screen1.innerHTML = null;
+		screen2.innerHTML = `${firstnum} ${signs}`;
+		console.log(`mathop1 ${signs}`);
+		console.log(`firstnum ${firstnum}`);
+		operand = signs;
+		collector(firstnum, operand);
+	}
+
+	function collector() {
+		firstnumber = firstnum;
+		secondnumber = Number(screen1.innerHTML);
+	}
+	function result(params) {
+		collector();
+		console.log(`firstnumber ${firstnumber}`);
+		console.log(`secondnumber ${secondnumber}`);
+		console.log(operand);
+		screen2.innerHTML += `${secondnumber}`;
+		if (operand == "+") {
+			total = firstnumber + secondnumber;
+			screen1.innerHTML = null;
+			screen1.innerHTML = total;
+		} else if (operand == "/") {
+			total = firstnumber / secondnumber;
+			screen1.innerHTML = null;
+			screen1.innerHTML = total;
+		} else if (operand == "-") {
+			total = firstnumber - secondnumber;
+			screen1.innerHTML = null;
+			screen1.innerHTML = total;
+		}
+	}
+
+	//   function clearScreen() {
+	//   document.getElementById("screen1").innerHTML = null;
+	//   }
+	// function number(num){
+	//   document.getElementById("screen1").innerHTML +=num;
+	// }
+	// function division(){
+	// a=operator(screen1.innerHTML);
+	// console.log(a);
+	// but="/"
+	// screen1.innerHTML=null;
+	// screen2.innerHTML=`${a} / `;
+	// total(a)
+	// }
+	// function total(){
+	// b=operator(screen1.innerHTML);
+	// screen2.innerHTML=null;
+	// screen2.innerHTML= `${a} / ${b}`;
+	// console.log(b);
+	// console.log(a);
+	// }
+	// function totalling(parms){
+	//  total1()
+	//  if(but =="/"){
+	//    tot=a/b;
+	// screen1.innerHTML=tot;
+
+	//  }
+	// }
+	// function clearScreen(){
+	// document.getElementById("screen1").innerHTML=null;
+	// }
+	// function opera(ope){
+	// document.getElementById("screen1").innerHTML /=ope;
+	// }
+</script>

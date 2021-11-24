@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo.png">
+</head>
+<style>
+    .class{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+.div{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+}
+.uche{
+    font-size: 14px;
+    font-weight: 400px;
+    color: rgba(0, 0, 0, 0.6);
+}
+#baby{
+    font-size: 14px;
+    font-weight: 400;
+    color: #006097;
+    text-decoration: none;
+}
+#baby:hover{
+    text-decoration: underline;
+}
+.bold{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+}
+.ex{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+}
+.go{
+    font-size: 14px;
+    font-weight: 600;
+    color: #004c7e;
+    text-decoration: none;
+}
+.go:hover{
+    text-decoration: underline;
+    background-color: #E5F5FC;
+}
+.tail{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+}
+.pick{
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+.sharp{
+    color: #0073b1;
+}
+.style{
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+.style:hover{
+    text-decoration: underline;
+    color: black;
+}
+.noble{
+    font-size: 14px;
+    font-weight: 600;
+}
+#noble{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+}
+.color{
+    font-size: 12px;
+    font-weight: 600;
+    color: #006097;
+    text-decoration: none;
+}
+.color:hover{
+    text-decoration: underline;
+}
+.number{
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.7);
+	border: none;
+	background-color: white;
+	height: 40px;
+}
+.number:hover{
+	background-color: #F3F3F3;
+	color: rgba(0, 0, 0, 0.894);
+}
+.learn{
+	letter-spacing: 3px;
+	padding-left: 3px;
+	font-size: 16px;
+	font-weight: 600;
+}
+input{
+	border: none;
+	/* width: 330px; */
+	/* height: 40px; */
+	background-color: #E9E9E9;
+	padding-left: 5px;
+	width: 90%;
+	outline: none;
+}
+.love{
+	width: 330px;
+	height: 40px;
+	background-color: #E9E9E9;
+	border-radius: 5px;
+	padding-top:5px ;
+	border: 1px solid lightblue;
+}
+/* .not{
+	padding-top: 5px;
+	width: 330px;
+	height: 40px;
+} */
+.help{
+	display: flex;
+	flex-flow: column nowrap;
+}
+.div{
+width: 85px; 
+height: 55px; 
+border-radius: 100%;
+overflow: hidden;
+}
+
+.yes{
+background-color: white;
+border: 1px solid lightgray;
+width: 330px;
+height: 560px;
+margin-top: -25px;
+margin-left: 310px;
+border-radius: 3px;
+overflow-y: scroll;
+display: none;
+}
+.lagos{
+text-decoration: none;
+color: rgb(65, 62, 62);
+font-size: 14px;
+}
+#up{
+margin-top: -15px;
+background-color: rgb(243,246,248);
+position: sticky;
+top: 40px; 
+z-index: 4;  
+height: 40px;
+border: 1px solid lightgray;
+}
+.nav2-links{
+text-decoration: none;
+color: rgb(88, 84, 84);
+padding: 5px 10px 5px 10px;
+font-size: 14px;
+}
+.none{
+padding: 5px 10px 5px 10px; 
+font-size: 14px;
+font-weight: 400;
+color: rgba(0, 0, 0, 0.6);
+}
+.nav2-links:hover{
+font-size: 14px;
+font-weight: 600;
+color: rgba(0, 0, 0, 0.9);
+}
+.lagos{
+text-decoration: none;
+color: rgb(65, 62, 62);
+font-size: 14px;
+}
+.ac {
+    background-color: #EBEFF1;
+    outline: none;
+  }
+  .ac:hover {
+    outline: 1px solid #0A66C2;
+    background-color: white;
+  }
+
+  .ae {
+    background-color: #EBEFF1;
+  }
+  .ae:hover {
+    background-color: white;
+  }
+
+  .top-a {
+    color: #0A66C2;
+  }
+
+  .ad {
+    border: none;
+    width: 300px;
+    height: 38px;
+    outline: none;
+    padding: 5px;
+  }
+  @media  (max-width: 769px) {
+      #up{
+          display: none;
+      }
+      .no{
+          display: block;
+      }
+      .see{
+          display: none;
+      }
+  }
+  .i-indent {
+    padding-top: 15px;
+    margin-right: 15px;
+  }
+
+  .i-span {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .div-span1 {
+    font-size: 14px;
+  }
+
+  li .div-span {
+    font-size: 12px;}
+</style>
+<body style="width: fit-content;">
+     <nav style="position: sticky; top: 0px; z-index: 2000; background-color: white;">
+            <nav class="navbar">
+                <main class="container d-flex ">
+                    <div>
+                        <img src="images/logo.png" width="25px">
+                        <span class="learn">LEARNING</span>
+                    </div>
+                    <nav class="navbar navbar-expand-sm no">
+                        <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <div class="collapse navbar-collapse" id="menu">
+                            <div>
+                                <i class="fa fa-bars ml-3"></i>
+                                <p>Browse</p>
+                            </div>
+                            <div class=" dropdown ac">
+                                <input type="text" placeholder="Search skills, subjects, or software" class="ae ad dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="#" class=" ae">
+                                    <i class="fa fa-search btn"></i>
+                                </a>
+                                <ul class="dropdown-menu content-ad border-0  shadow" aria-labelledby="dropdownMenuLink" style="overflow-y: scroll;">                    
+                                    <li><button href="#" class="top-a dropdown-item " type="button">Browse by topic</button></li>
+                                    <hr>                            
+                                    <li><span href="#" class="dropdown-item-text div-span" type="text"> Trending business topics</span></li>
+                                    <li>
+                                        <button href="#" class="dropdown-item d-flex" type="button">
+                                            <i class="fa fa-indent i-indent "></i>
+                                            <div>
+                                                <span class="div-span1">Leadership and Management</span> <br>
+                                                <span class="i-span">910 course results</span>
+                                            </div>
+                                        </button>
+                                        <button href="#" class="dropdown-item d-flex" type="button">
+                                            <i class="fa fa-indent i-indent "></i>
+                                            <div>
+                                                <span class="div-span1">Professional Development</span> <br>
+                                                <span class="i-span">872 course results</span>
+                                            </div>
+                                        </button>
+                                        <button href="#" class="dropdown-item d-flex" type="button">
+                                            <i class="fa fa-indent i-indent "></i>
+                                            <div>
+                                                <span class="div-span1">Business Software and Tools</span> <br>
+                                                <span class="i-span">836 course results</span>
+                                            </div>
+                                        </button><hr>
+                                    <li><span href="#" class="dropdown-item-text div-span" type="text"> Trending creative topics</span></li>
+                                        <button href="#" class="dropdown-item d-flex" type="button">
+                                            <i class="fa fa-indent i-indent "></i>
+                                            <div>
+                                                <span class="div-span1">Graphics Design</span> <br>
+                                                <span class="i-span">568 course results</span>
+                                            </div>
+                                        </button>
+                                        <button href="#" class="dropdown-item d-flex" type="button">
+                                            <i class="fa fa-indent i-indent "></i>
+                                            <div>
+                                                <span class="div-span1">AEC</span> <br>
+                                                <span class="i-span">774 course results</span>
+                                            </div>
+                                        </button>
+                                        <button href="#" class="dropdown-item d-flex" type="button">
+                                            <i class="fa fa-indent i-indent "></i>
+                                            <div>
+                                                <span class="div-span1">Photography</span> <br>
+                                                <span class="i-span">502 course results</span>
+                                            </div>
+                                        </button><hr>
+                                    <li><span href="#" class="dropdown-item-text div-span" type="text"> Trending technology topics</span></li>
+                                        <button href="#" class="dropdown-item d-flex" type="button">
+                                            <i class="fa fa-indent i-indent "></i>
+                                            <div>
+                                                <span class="div-span1">Data Science</span> <br>
+                                                <span class="i-span">533 course results</span>
+                                            </div>
+                                        </button>
+                                        <button href="#" class="dropdown-item d-flex" type="button">
+                                            <i class="fa fa-indent i-indent "></i>
+                                            <div>
+                                                <span class="div-span1">Software Development</span> <br>
+                                                <span class="i-span">804 course results</span>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li><button href="#" class="dropdown-item text-success " type="button">Learning</button></li>
+                                </ul>                   
+                            </div>
+                            <section class="d-flex">
+                                <div class="p-3">
+                                    <a href="#" class="lagos">
+                                        <div class="help">
+                                            <i class="fa fa-home" style="font-size: 20px; padding-left: 5px;"></i>
+                                            <span>Home</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-3">
+                                    <a href="#" class="lagos">
+                                        <div class="help">
+                                            <i class="fa fa-columns" style="font-size: 20px; padding-left: 5px;"></i>
+                                            <span>Learning</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="dropdown p-3 pt-2">
+                                    <img src="images/mourinho.jpg" alt="" style="width: 25px; height: 25px; border-radius: 100%;"><br>
+                                    <a href="#"class=" a dropdown-toggle lagos"  type="link" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Me  
+                                    </a>
+                                    <ul class="dropdown-menu shadow-sm  " aria-labelledby="dropdownMenuButton1" style="width: 230px;">
+                                        <section class="d-flex justify-content-between" style="padding: 15px 15px 0px 15px;">
+                                            <div>
+                                                <img src="images/mourinho.jpg" style="width: 60px; height: 60px; border-radius: 100%;">
+                                            </div>
+                                            <div>
+                                                <h6>Opeyemi Adewumi</h6>
+                                                <p>Personal Account</p>
+                                            </div>
+                                        </section><hr>
+                                      <li><a class="dropdown-item" href="#">My Learning</a></li>
+                                      <li><a class="dropdown-item" href="#">In Progress</a></li>
+                                      <li><a class="dropdown-item" href="#">Saved</a></li>
+                                      <li><a class="dropdown-item" href="#">Collections</a></li>
+                                      <li><a class="dropdown-item" href="#">Learning History</a></li>
+                                      <li><a class="dropdown-item" href="#">Skills</a></li>
+                                      <hr>
+                                      <li><a class="dropdown-item" href="#">Language</a></li>
+                                      <li><a class="dropdown-item" href="#">Settings</a></li>
+                                      <li><a class="dropdown-item" href="#">Go to Linkedin Profile</a></li>
+                                      <li><a class="dropdown-item" href="#">Buy for my team</a></li>
+                                      <li><a class="dropdown-item" href="#">Help center</a></li>
+                                      <li><a class="dropdown-item" href="#">Sign out.</a></li>
+                
+                                    </ul>
+                                </div>
+                                <div class="dropdown p-3 pt-2">
+                                    <i class="fa fa-globe" style="font-size: 20px; padding-left: 5px;"></i><br>
+                                    <a href="#"class=" a dropdown-toggle lagos"  type="link" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                      EN
+                                    </a>
+                                    <ul class="dropdown-menu shadow-sm  " aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="#">Language</a></li>
+                                      <li><a class="dropdown-item" href="#">English (English)</a></li>
+                                      <li><a class="dropdown-item" href="#">Espanol (Spanish)</a></li>
+                                      <li><a class="dropdown-item" href="#">Francais (French)</a></li>
+                                      <li><a class="dropdown-item" href="#">Deutsch (German)</a></li>
+                                      <li><a class="dropdown-item" href="#">日本 (Japanese)</a></li>
+                                      <li><a class="dropdown-item" href="#">华语 / 華語 (Simplified Chinese)</a></li>
+                                      <li><a class="dropdown-item" href="#">português (Portuguese)</a></li>
+                
+                                    </ul>
+                                </div>
+                            </section>
+                            <div>
+                                <button class="number">Start my free month</button>
+                            </div>
+                       </div>        
+                    </nav> 
+                </main>
+            </nav>
+            <section id="up" class="shadow-sm">
+                <div class="container d-flex justify-content-end">
+                    <div class="none">
+                        Solutions for:
+                    </div>
+                    <a href="#" class="nav2-links"> Business </a> 
+                    <a href="#" class="nav2-links"> Higher Education </a>
+                    <a href="#" class="nav2-links"> Government </a>
+                    <span style="padding: 5px 10px 5px 10px;"> | </span>
+                    <a href="#" class="nav2-links"> Buy for my team </a> 
+                </div>
+            </section>
+        </nav>
+    </nav>
+    <main class="container-fluid ">
+        <div class="row d-flex">
+            <div style="position: sticky;top:115px; height: 1100px;" class=" bg-dark text-white col-sm-3 see">
+               <div class="navbar">
+                <div>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <span class="px-2">Courses</span>
+                </div>
+                <div><button type="button" style="border: none;" data-dismiss="modal">&times;</button> </div>
+               </div> <hr>
+               <i class="fa fa-arrow-left" aria-hidden="true"></i>   
+               <span>BACK TO LEARNING PATH</span> 
+               <P>Become a Data Scientist</P> <hr>
+               <div class="d-flex justify-content-between">
+                     <span>Documentary</span>         
+                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
+               </div><hr>
+               <div class="d-flex">
+                   <div>
+                        <i class="fa fa-check" aria-hidden="true"></i>  
+                        <span>Bracketology Club: Using March madness to Learn Data Science</span>
+                   </div>
+                   <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+               </div>
+            </div>
+
+            <div class="col-sm-9 bg-dark text-white">
+                <main class="d-flex justify-content-between">
+                    <div style="line-height: 8px;" class="see">
+                        <p>Bracketology Club: Using March madness to Learn Data Science</p>
+                        <p>Bracketology Club: Using March madness to Learn Data Science</p>
+                    </div>
+                    <div class="see">
+                        <span style="border: 1px solid;" class="px-2"><i class="fa fa-star-o" aria-hidden="true"></i>Leave a review</span>
+                        <span class="px-2"><i class="fa fa-thumbs-o-up px-1" aria-hidden="true"></i>2001</span>
+                        <span class="px-2"><i class="fa fa-bookmark-o px-1" aria-hidden="true"></i>3,293</span> |
+                        <i class="fa fa-plus text-white px-2" aria-hidden="true"></i>
+                        <i class="fa fa-share text-white px-2" aria-hidden="true"></i>
+                    </div>
+                </main>
+                <hr>
+                <iframe width="100%" height="400px" src="https://youtu.be/ACjUkK4P64k" frameborder="0"></iframe>
+                <hr>
+                <main class="d-flex  justify-content-between">
+                    <div>
+                        <i class="fa fa-play px-2" aria-hidden="true"></i>
+                        <i class="fa fa-fast-backward px-2" aria-hidden="true"></i>
+                        <i class="fa fa-fast-forward px-2" aria-hidden="true"></i>
+                        <i class="fa fa-step-backward px-2" aria-hidden="true"></i>
+                        <i class="fa fa-step-forward px-2" aria-hidden="true"></i>
+                        <span>1:31</span>/ <span>12:08</span>
+                    </div>
+                    <div>
+                        <span class="px-2">1x</span>
+                        <i class="fa fa-cc px-2 " aria-hidden="true"></i>
+                        <i class="fa fa-cog px-2" aria-hidden="true"></i>
+                        <i class="fa fa-volume-up px-2" aria-hidden="true"></i>
+                        <i class="fa fa-square-o px-2" aria-hidden="true"></i>
+                    </div>
+                </main>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab" aria-controls="overview" aria-selected="true">Overview</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#qa" type="button" role="tab" aria-controls="qa" aria-selected="false">Q&A</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="notebook-tab" data-bs-toggle="tab" data-bs-target="#notebook" type="button" role="tab" aria-controls="notebook" aria-selected="false">Notebook</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="transcript-tab" data-bs-toggle="tab" data-bs-target="#transcript" type="button" role="tab" aria-controls="transcript" aria-selected="false">Transcript</button>
+                      </li>
+                  </ul>
+                  <div class="tab-content bg-white" id="myTabContent">
+                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 pt-3">
+                                    <div class="row">
+                                        <div class="col-sm-7">
+                                            <h2 class="class">INSTRUCTOR</h2>
+                                            <div class="d-flex pt-2">
+                                                <img src="images/mourinho.jpg" alt="" style=" border-radius: 50%; height: 56px; width: 56px;">
+                                                <main class="ml-3">
+                                                    <div>Micheal McDonald</div>
+                                                    <div class="uche">
+                                                        Researcher and Professor of Finance at Fairfield <br> University
+                                                    </div>
+                                                    <a href="#" id="baby">View on LinkedIn</a>
+                                                </main>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-5 card shadow-0 border-top-0 border-right-0 border-bottom-0 rounded-0">
+                                            <h2 class="bold">RELATED TO THIS COURSE</h2>
+                                            <div class="d-flex pt-2">
+                                                <i class="fa fa-users"></i>
+                                                <div class="ex pl-2">Learning Groups .</div>
+                                                <a href="#" class="go pl-3">Show all</a>
+                                            </div>
+                                            <div class="d-flex pt-2">
+                                                <i class="fa fa-file-text-o"></i>
+                                                <div class="ex pl-2">Exercise Files (2) .</div>
+                                                <a href="#" class="go pl-3">Show all</a>
+                                            </div>
+                                            <div class="d-flex pt-2">
+                                                <i class="fa fa-file-o"></i>
+                                                <div class="ex pl-2">Certificates .</div>
+                                                <a href="#" class="go pl-3">Show all</a>
+                                            </div>
+                                            <div class="d-flex pt-2">
+                                                <i class="fa fa-file-o"></i>
+                                                <div class="ex pl-2">Countinuing Educations Units  .</div>
+                                                <a href="#" class="go pl-3">Show all</a>
+                                            </div>
+                                            <div class="d-flex pt-2">
+                                                <i class="fa fa-pencil-square-o"></i>
+                                                <div class="ex pl-2">Exam .</div>
+                                                <a href="#" class="go pl-3">Resume Exam</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <main class="container">
+                                        <h2 class="tail">Course details</h2>
+                                        <div class="d-flex">
+                                            <li class="pick">1h 37m .</li>
+                                            <li class="pl-2 pick">Intermediate .</li>
+                                            <li class="pl-2 pick">Released: 7/19/2017</li>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="pr-2 pt-2 pb-2">
+                                                <i class="fa fa-star sharp"></i>
+                                                <i class="fa fa-star sharp"></i>
+                                                <i class="fa fa-star sharp"></i>
+                                                <i class="fa fa-star sharp"></i>
+                                                <i class="fa fa-star-half-o sharp"></i>
+                                            </div>
+                                            <div class="pt-2 pb-2" style="font-size: 16px; font-weight: 400; color: rgba(0, 0, 0, 0.6);">(357)</div>
+                                        </div>
+                                        <div>
+                                            <p class="text-dark">
+                                                Big data is transforming the world of business. Yet many people don't understand what big data and 
+                                                business intelligence are, or how to apply the techniques to their day-to-day jobs. This course addresses  
+                                                that knowledge gap by showing how to use large volumes of economic data to gain key business  insights and analyze market conditions.
+                                                <br><br>
+                                                Professor Michael McDonald demonstrates how to harness the wealth of information available on the 
+                                                Internet to forecast statistics such as industry growth, GDP, and unemployment rates, as well as factors 
+                                                that directly affect your business, like property prices and future interest rate hikes. All you need is 
+                                                Microsoft Excel. Michael uses the built-in formulas, functions, and calculations to perform regression
+                                                analysis, calculate confidence intervals, and stress test your results. He also covers time series exponential
+                                                smoothing, fixed effects regression, and difference estimators. You'll walk away from the course able to
+                                                immediately begin creating forecasts for your own business needs.
+                                            </p>
+                                        </div>
+                                        <div class="pt-3">
+                                            <h3 class="tail">Learning objectives</h3>
+                                            <ul class="text-dark">
+                                                <li>Identify a good source of free data.</li>
+                                                <li>Name the term for the estimate of the impact of an X variable on a Y variable.</li>
+                                                <li>Tell which statistic offers a bounds on the estimate of the impact of an X variable on a Y variable.</li>
+                                                <li>Assess the type of variable that can be used to capture fixed effects.</li>
+                                                <li>Cite the method by which a forecast can be done with a regression.
+                                                    Skills covered</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pt-3 pb-5">
+                                            <h3 class="tail">Skills covered</h3>
+                                            <div class="pt-2" style="display: flex; flex-wrap: wrap;">
+                                                <li class="mt-2" style="list-style: none; border: 1px solid #354b58; width: 210px; height: 25px; font-size: 16px;font-weight: 600; color: #354b58; text-align: center; border-radius: 50px;">Business Intelligence (BI)</li>
+                                                <li class="ml-2 mt-2" style="list-style: none; border: 1px solid #354b58; width: 170px; height: 25px; font-size: 16px;font-weight: 600; color: #354b58; text-align: center; border-radius: 50px;">Corporate Finance</li>
+                                                <li class="ml-2 mt-2" style="list-style: none; border: 1px solid #354b58; width: 90px; height: 25px; font-size: 16px;font-weight: 600; color: #354b58; text-align: center; border-radius: 50px;">Big Data</li>
+                                                <li class="ml-2 mt-2" style="list-style: none; border: 1px solid #354b58; width: 130px; height: 25px; font-size: 16px;font-weight: 600; color: #354b58; text-align: center; border-radius: 50px;">Data Analysis</li>
+                                                <li class=" mt-2" style="list-style: none; border: 1px solid #354b58; width: 160px; height: 25px; font-size: 16px;font-weight: 600; color: #354b58; text-align: center; border-radius: 50px;">Economic Analysis</li>
+                                                <li class="ml-2 mt-2" style="list-style: none; border: 1px solid #354b58; width: 150px; height: 25px; font-size: 16px;font-weight: 600; color: #354b58; text-align: center; border-radius: 50px;">Microsoft Excel</li>
+                                            </div>
+                                        </div>
+                                    </main>
+                                </div>
+                                <div class="col-sm-4 card">
+                                    <h3 class="tail pt-4">Related courses</h3>
+                                    <main>
+                                        <div class="d-flex">
+                                            <div class="" style=" height: 130px; align-items: center;">
+                                                <img src="images/undraw_Code_review_re_woeb.png" width="150px" height="80%" style="border-radius: 5px;">
+                                                <span class="border rounded-sm text-dark px-2" style="background-color: white; position:absolute; left: 4%;top:6%;" >NEW</span>
+                                                <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 200; top: 13.7%; left: 29%; opacity: 0.7;">3h 7m</span>
+                                            </div>
+                                            <div style="margin-right: -100px;">
+                                                <p style="font-size: 12px; font-weight: 400;">COURSE</p>
+                                                <div class="style">Excel Data Analysis: Forecating</div>
+                                                <span style="font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.6);">242,279 learners</span>
+                                            </div>
+                                        </div><hr>
+                                        <div class="d-flex">
+                                            <div class="" style=" height: 130px; align-items: center;">
+                                                <img src="images/undraw_drone_surveillance_kjjg.png" width="150px" height="80%" style="border-radius: 5px;">
+                                                <span class="border rounded-sm text-dark px-2" style="background-color: white; position:absolute; left: 4%;top:22.5%;" >NEW</span>
+                                                <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 200; top: 30%; left: 29%; opacity: 0.7;">3h 7m</span>
+                                            </div>
+                                            <div style="margin-right: -100px;">
+                                                <p style="font-size: 12px; font-weight: 400;">COURSE</p>
+                                                <div class="style">Excel Data Analysis: Forecating</div>
+                                                <span style="font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.6);">242,279 learners</span>
+                                            </div>
+                                        </div><hr>
+                                        <div class="d-flex">
+                                            <div class="" style=" height: 130px; align-items: center;">
+                                                <img src="images/undraw_researching_22gp.png" width="150px" height="80%" style="border-radius: 5px;">
+                                                <span class="border rounded-sm text-dark px-2" style="background-color: white; position:absolute; left: 4%;top:39%;" >NEW</span>
+                                                <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 200; top: 47%; left: 29%; opacity: 0.7;">3h 7m</span>
+                                            </div>
+                                            <div style="margin-right: -100px;">
+                                                <p style="font-size: 12px; font-weight: 400;">COURSE</p>
+                                                <div class="style">Excel Data Analysis: Forecating</div>
+                                                <span style="font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.6);">242,279 learners</span>
+                                            </div>
+                                        </div><hr>
+                                        <div class="d-flex">
+                                            <div class="" style=" height: 130px; align-items: center;">
+                                                <img src="images/undraw_drone_surveillance_kjjg.png" width="150px" height="80%" style="border-radius: 5px;">
+                                                <span class="border rounded-sm text-dark px-2" style="background-color: white; position:absolute; left: 4%;top:55.5%;" >NEW</span>
+                                                <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 200; top: 63%; left: 29%; opacity: 0.7;">3h 7m</span>
+                                            </div>
+                                            <div style="margin-right: -100px;">
+                                                <p style="font-size: 12px; font-weight: 400;">COURSE</p>
+                                                <div class="style">Excel Data Analysis: Forecating</div>
+                                                <span style="font-size: 12px; font-weight: 400; color: rgba(0, 0, 0, 0.6);">242,279 learners</span>
+                                            </div>
+                                        </div>
+                                    </main>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="qa" role="tabpanel" aria-labelledby="qa-tab">
+                        <main class="container bg-white     ">
+                            <div>
+                                <i class="fa fa-question-circle-o"></i>
+                                <span> Looking for technical assistance (e.g. downloading certificates)? Visit</span>
+                                <a href="#" id="baby">Learning Help</a>
+                            </div>
+            
+                            <div class="card  pt-3 mt-3">
+                                <div class="container">
+                                    <div class="d-flex">
+                                        <img src="images/IMG_20200711_170112.jpg" alt="" width="56px" height="56px" style="border-radius: 50%;">
+                                        <div class="pl-3">
+                                            <h3 class="noble">Maximilliano Meza</h3>
+                                            <p id="noble">Brand Director/ Strategy/ Brand Management/ Team Builder/ International Sales <br>5mo</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Hi Michael, looks like Fred add in is only for Windows, is there any update regarding a MAC version?. <br> 
+                                            Thanks
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <span id="noble">From the video:</span>
+                                        <a href="#" class="color">Sources of economic data (05:08)</a>
+                                    </div>
+                                    <div>
+                                        <span class="uche">3 Likes .</span>
+                                        <span class="uche"> 1 Answer</span>
+                                    </div> <hr>
+                                    <div class="d-flex">
+                                        <div>
+                                            <i class="fa fa-thumbs-o-up"></i>
+                                            <span class="pl-2">Like</span>
+                                        </div>
+                                        <div class="ml-4">
+                                            <i class="fa fa-commenting-o"></i>
+                                            <span class="pl-2">Answer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="background-color: #F3F6F8;">
+                                    <div class="container pt-3 d-flex ">
+                                        <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #616263; ">
+                                            <i class="fa fa-user-o text-white pt-2 justify-content-center d-flex"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                    </div>
+                    <div class="tab-pane fade" id="notebook" role="tabpanel" aria-labelledby="notebook-tab">...</div>
+                    <div class="tab-pane fade" id="transcipt" role="tabpanel" aria-labelledby="transcript-tab">...</div>
+                  </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

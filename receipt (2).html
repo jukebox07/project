@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<title>Document</title>
+		<style>
+			#myTable {
+				margin: auto;
+			}
+			#myTable,
+			td {
+				border: 2px solid;
+				height: 40px;
+				font-size: small;
+				font-weight: 100;
+				/* margin: 4px; */
+			}
+			#myData1 {
+				width: 50px;
+			}
+			#myData2 {
+				width: 200px;
+				text-align: center;
+			}
+			#myData3 {
+				width: 100px;
+				text-align: center;
+			}
+			#myData4 {
+				width: 120px;
+				text-align: center;
+			}
+			#myData5 {
+				width: 120px;
+				text-align: center;
+			}
+			#myData6 {
+				width: 100px;
+				text-align: center;
+			}
+			#itemNm {
+				width: 250px;
+				text-align: center;
+				font-size: small;
+				/* font-size: medium; */
+				font-weight: 100;
+				border: none;
+				outline: none;
+			}
+			#itemNm:focus {
+				box-shadow: 0px 0px 5px grey;
+				outline: grey;
+				border-radius: 10px;
+				border: 2px solid grey;
+				width: 250px;
+			}
+			#itemQty {
+				outline: none;
+				border: none;
+				width: 80px;
+				text-align: center;
+				font-size: small;
+				/* font-weight: 100; */
+				border-radius: 10px;
+			}
+			#itemQty:focus {
+				box-shadow: 0px 0px 5px grey;
+				outline: grey;
+				border-radius: 10px;
+				border: 2px solid grey;
+				width: 75px;
+			}
+			#addBtn,
+			#delBtn {
+				margin: 5px;
+			}
+			#addBtn {
+				background-color: cyan;
+				color: red;
+				font-weight: 500;
+				font-size: 15px;
+				width: 60px;
+				/* height: 30px; */
+				border: 2px solid red;
+				outline: 1px solid cyan;
+				border-radius: 15px;
+			}
+			#addBtn:active {
+				border: 2px solid cyan;
+				outline: 1px solid red;
+				/* height: 35px; */
+			}
+			#delBtn {
+				background-color: red;
+				color: cyan;
+				font-weight: 500;
+				font-size: 15px;
+				width: 60px;
+				/* height: 30px; */
+				border: 2px solid cyan;
+				outline: 1px solid red;
+				border-radius: 15px;
+			}
+			#delBtn:active {
+				border: 2px solid red;
+				outline: 1px solid cyan;
+				/* height: 35px; */
+			}
+
+			#priceDisp {
+				width: 98px;
+				text-align: center;
+			}
+			#subTotalDisp {
+				width: 150px;
+				text-align: center;
+			}
+			#btnDiv {
+				margin: auto;
+				width: 100%;
+				/* text-align: center; */
+			}
+			.rcptHdDiv {
+				height: 150px;
+				width: 800px;
+				margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<main class="container-fluid row">
+			<div class="text-center col-sm-12 bg-info rcptHdDiv">
+				<h4
+					style="
+						font-size: x-large;
+						color: whitesmoke;
+						margin-top: auto;
+						padding-top: 25px;
+					"
+				>
+					E-RECEIPT
+				</h4>
+			</div>
+			<div id="displayDiv" class="row"></div>
+			<button class="btn btn-primary" id="newItem">
+				Add New Item
+			</button>
+		</main>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>
+<script src="../JavaScript/receipt.js"></script>

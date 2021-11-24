@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="grow"></h1>
+  </body>
+</html>
+<script>
+  let fish;
+  let students = [
+    { name: "Abati", sex: "Male", age: 44 },
+    { name: "Tunde", sex: "Male", age: 14 },
+    { name: "Grace", sex: "Female", age: 37 },
+    { name: "Gerald", sex: "Male", age: 66 },
+  ];
+  let users;
+  let stu = [...students];
+  localStorage.setItem("LIBRARY", 1234567);
+  localStorage.setItem("details", JSON.stringify(stu));
+
+  fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => response.json())
+    .then((data) => {
+      users = data;
+      console.log(users);
+    })
+    .catch(() => {
+      console.log("no way");
+    });
+  setTimeout(() => {
+    for (let i = 0; i < users.length; i++) {
+      document.getElementById(
+        "grow"
+      ).innerHTML += `<li>${users[i].name}${users[i].username}</li>`;
+    }
+  }, 5000);
+</script>

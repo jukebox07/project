@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+  />
+  <!-- CSS only -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <!-- JavaScript Bundle with Popper -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <body>
+    <main
+      class=""
+      style="
+        background: linear-gradient(
+          40deg,
+          rgb(53, 54, 54) 30%,
+          blue 10%,
+          magenta 60%
+        );
+      "
+    >
+      <h1 class="text-center text-dark">THE CURRENT TIME</h1>
+      <main class="d-flex justify-content-around">
+        <div
+          class="bg-light shadow"
+          style="height: 70px; width: 50px; border-radius: 10px"
+        >
+          <h1 id="me" class="text-center mt-2"></h1>
+        </div>
+        <h1>:</h1>
+        <div
+          class="bg-light"
+          style="height: 70px; width: 50px; border-radius: 10px"
+        >
+          <h1 id="you" class="text-center mt-2"></h1>
+        </div>
+        <h1>:</h1>
+
+        <div
+          class="bg-light"
+          style="height: 70px; width: 50px; border-radius: 10px"
+        >
+          <h1 id="them" class="text-center mt-2"></h1>
+        </div>
+      </main>
+      <main class="d-flex justify-content-around">
+        <div class="text-white">HR</div>
+        <div></div>
+        <div class="text-white">MIN</div>
+        <div></div>
+        <div class="text-white">SEC</div>
+      </main>
+    </main>
+    <div
+      class="border-outline"
+      style="
+        background: linear-gradient(
+          30deg,
+          rgba(243, 243, 236, 0.849),
+          lightblue
+        );
+      "
+    >
+      <h1 class="text-center">SET ALARM</h1>
+      <div class="d-flex justify-content-around">
+        <input
+          type="number"
+          id="yes"
+          placeholder="input hour"
+          class="form-control"
+          style="background: rgb(124, 39, 124); color: white"
+        />
+        <input
+          type="number"
+          id="no"
+          placeholder="input minute"
+          class="form-control"
+          style="background: rgb(124, 39, 124); color: white"
+        />
+        <input
+          type="text"
+          id="tye"
+          placeholder="input task to be done"
+          class="form-control"
+          style="background: rgb(124, 39, 124); color: white"
+        />
+      </div>
+      <center>
+        <button
+          class="mt-5 text-white btn-primary form-control"
+          onclick="check()"
+        >
+          SET
+        </button>
+        <button
+          class="mt-2 text-white bg-dark form-control"
+          onclick="restart()"
+        >
+          RESET
+        </button>
+      </center>
+    </div>
+    <div>
+      <h1 id="gig"></h1>
+      <h1 id="modal"></h1>
+      <h1 id="gist"></h1>
+    </div>
+    <audio
+      src="C:\Users\User\Desktop\project code\00 - p_i_m_p_.mp3"
+      id="shout"
+    ></audio>
+  </body>
+  <script>
+    let index = 0;
+    let count = 0;
+    // let date = new Date();
+
+    // console.log(timeSecs);
+    // console.log(timeHour);
+    // console.log(timeMinute);
+    let f = document.getElementById("shout");
+
+    let timeDisp = function () {
+      setTimeout(() => {
+        date = new Date();
+        let hr = date.getHours();
+        let min = date.getMinutes();
+        let sec = date.getSeconds();
+        if (hr < 10) {
+          me.innerHTML = `0${hr}`;
+        } else {
+          me.innerHTML = hr;
+        }
+        if (min < 10) {
+          you.innerHTML = `0${min}`;
+        } else {
+          you.innerHTML = min;
+        }
+        if (sec < 10) {
+          them.innerHTML = `0${sec}`;
+        } else {
+          them.innerHTML = sec;
+        }
+
+        // me.innerHTML = hr;
+        // you.innerHTML = min;
+        // them.innerHTML = sec;
+        timeDisp();
+      }, 1000);
+    };
+
+    // gig.hidden = true;
+
+    function check(params) {
+      timeDisp();
+      h = Number(document.getElementById("yes").value);
+      m = Number(document.getElementById("no").value);
+      t = document.getElementById("tye").value;
+      if (h <= 23 && h >= 0 && Number.isSafeInteger(h) && h != "") {
+        if (h < 10) {
+          gig.innerHTML = `0${h}:${m}`;
+          gist.innerHTML = `Your alarm for ${t} has been set for ${h}:${m}`;
+        }
+      } else {
+        alert("Invalid hour input");
+        location.reload();
+      }
+      if (m <= 59 && m >= 0 && Number.isSafeInteger(m) && m != "") {
+        if (m < 10) {
+          gig.innerHTML = `${h}:0${m}`;
+          gist.innerHTML = `Your alarm for ${t} has been set for ${h}:${m}`;
+        }
+      } else {
+        alert("Invalid minute input");
+        location.reload();
+      }
+      let term = setInterval(() => {
+        if (h == date.getHours() && m == date.getMinutes()) {
+          clearInterval(term);
+          modal.innerHTML = `Time for ${t};`;
+          gist.hidden = true;
+          //   gig.hidden = false;
+
+          f.play();
+        }
+      }, 100);
+    }
+    function restart(params) {
+      // check();
+      location.reload();
+    }
+    timeDisp();
+  </script>
+</html>

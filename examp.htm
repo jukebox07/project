@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // let names = (x) => {
+    //   alert(x);
+    // };
+    // names("teslim");
+    // let names = (x) => {
+    //   alert(x);
+    // };
+    // names("teslim");
+    // data destruction
+    // let a = [1, 2, 3, 4, 5, 6];
+    // let [b] = a;
+    // console.log(b);
+    // let a = [1, 2, 3, 4, 5, 6];
+    // let [, b] = a;
+    // console.log(b);
+    // let a = [1, 2, 3, 4, 5, 6];
+    // let [, b, , , c] = a;
+    // console.log(b, c);
+    // let v = { name: "teslim", age: 10, phone: 123456789 };
+    // let { name, age } = v;
+    // console.log(name, age);
+    // let v = { name: "teslim", age: 10, phone: 123456789 };
+    // let { name: h, phone: y } = v;
+    // console.log(h, y);
+    let v = {
+      name: "teslim",
+      age: 10,
+      phone: 123456789,
+      hobbies: ["coding", "eating", "sleeping"],
+    };
+    // let {
+    //   hobbies: [you, , me],
+    // } = v;
+    // console.log(you, me);
+    // function jug({ name, phone, hobbies: [, g] }) {
+    //   console.log(name, phone, g);
+    // }
+    // jug(v);
+
+    // let king = {
+    //   name: "Teslim",
+    //   age: 19,
+    //   phone: 9876543,
+    //   hobbies: ["coding", "eating", "sleeping"],
+    //   stacks: { names: ["javascript", "angular"], level: 60 },
+    // };
+
+    // let {
+    //   stacks: {
+    //     names: [r, y],
+    //     level: m,
+    //   },
+    // } = king;
+    // console.log(r, y, m);
+    // let a = [1, 2, 3, 4, 5, 6];
+    // let [c, d, ...e] = a;
+    // console.log(c, d, e);
+    // function gig(...params) {
+    //   console.log(params);
+    // }
+    // gig(67, 34, 456, 567, 6);
+    // let a = [1, 2, 3, 4, 5, 6];
+    // c = a;
+    // c[1] = 100;
+    // console.log(c, a);
+    // let a = [1, 2, 3, 4, 5, 6];
+    // let b = [1, 2, 3, 4, 5, 6];
+    // c = [...a, ...b];
+    // c[1] = 100;
+    // console.log(c, a);
+    let a = [1, 2, 3, 4, 5, 6];
+    let b = 200;
+    c = [...a, ...[b]];
+    c[1] = 100;
+    console.log(c);
+    // let a = [1, 2, 3, 4, 5, 6];
+    // let b = { name: "teslim", age: 16 };
+    // c = [...a, ...[b]];
+    // c[1] = 100;
+    // console.log(c);
+  </script>
+</html>

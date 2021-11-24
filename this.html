@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
+
+<script>
+  // function Human(name, age, eyes, legs, gender) {
+  //   this.name = name || "Teslim";
+  //   this.age = age || 70;
+  //   this.eyes = eyes;
+  //   this.legs = legs;
+  //   this.gender = gender || "female";
+
+  //   this.IsGender = function () {
+  //     if (gender == "female") {
+  //       return `She is a woman`;
+  //     } else {
+  //       return `He is a man`;
+  //     } // OR
+  //     //   if (this.legs == 2) {
+  //     //     return true;
+  //     //   } else {
+  //     //     return false;
+  //     //   }
+  //   };
+
+  //   this.info = function () {
+  //     return `The name is ${this.name}, and the age is ${this.age} and the gender is ${this.gender} `;
+  //   };
+  // }
+
+  // let adam = new Human("adam", 30, 3, 3, "male");
+  // let eve = new Human("Eve", 40, 2, 2, "male");
+  // console.log(adam.info());
+  // console.log(eve.IsGender());
+  class Human {
+    constructor(name, age, eyes, legs, gender) {
+      this.name = name || "Teslim";
+      this.age = age || 70;
+      this.eyes = eyes;
+      this.legs = legs;
+      this.gender = gender || "female";
+    }
+
+    // this.info = function () {
+    //   return `The name is ${this.name}, and the age is ${this.age} and the gender is ${this.gender} `;
+    // };
+  }
+
+  class adam extends Human {
+    constructor() {
+      super("Mensah", 39);
+      this.height = 23;
+    }
+  }
+  let c = new adam();
+  console.log(c);
+</script>
+<!-- <script src="this.js"></script> -->

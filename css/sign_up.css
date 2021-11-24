@@ -1,0 +1,13 @@
+.text{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+}
+h1{
+    text-align:center;
+}
+a:hover{text-decoration: underline;
+
+}

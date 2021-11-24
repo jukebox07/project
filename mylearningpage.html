@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo.png"> 
+</head>
+<style>
+    * {box-sizing: border-box}
+    
+    /* Set height of body and the document to 100% */
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+    
+    /* Style tab links */
+    .tablink {
+      color: blue;
+      float: left;
+      border-bottom: none;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      font-size: 17px;
+      margin: 10px;
+    }
+    
+    .tablink:focus {
+      background-color: white;
+      border-bottom: 3px solid blue;
+    }
+    
+    
+    .tabcontent {
+      color: black;
+      display: none;
+      padding: 100px 20px;
+      height: 100%;
+    }
+    .number{
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.7);
+	border: none;
+	background-color: white;
+	height: 40px;
+}
+.number:hover{
+	background-color: #F3F3F3;
+	color: rgba(0, 0, 0, 0.894);
+}
+.learn{
+	letter-spacing: 3px;
+	padding-left: 3px;
+	font-size: 16px;
+	font-weight: 600;
+}
+input{
+	border: none;
+	/* width: 330px; */
+	/* height: 40px; */
+	background-color: #E9E9E9;
+	padding-left: 5px;
+	width: 90%;
+	outline: none;
+}
+.love{
+	width: 330px;
+	height: 40px;
+	background-color: #E9E9E9;
+	border-radius: 5px;
+	padding-top:5px ;
+	border: 1px solid lightblue;
+}
+/* .not{
+	padding-top: 5px;
+	width: 330px;
+	height: 40px;
+} */
+.help{
+	display: flex;
+	flex-flow: column nowrap;
+}
+.div{
+width: 85px; 
+height: 55px; 
+border-radius: 100%;
+overflow: hidden;
+}
+
+.yes{
+background-color: white;
+border: 1px solid lightgray;
+width: 330px;
+height: 560px;
+margin-top: -25px;
+margin-left: 310px;
+border-radius: 3px;
+overflow-y: scroll;
+display: none;
+}
+.lagos{
+text-decoration: none;
+color: rgb(65, 62, 62);
+font-size: 14px;
+}
+#up{
+margin-top: -15px;
+background-color: rgb(243,246,248);
+position: sticky;
+top: 40px; 
+z-index: 4;  
+height: 40px;
+border: 1px solid lightgray;
+}
+.nav2-links{
+text-decoration: none;
+color: rgb(88, 84, 84);
+padding: 5px 10px 5px 10px;
+font-size: 14px;
+}
+.none{
+padding: 5px 10px 5px 10px; 
+font-size: 14px;
+font-weight: 400;
+color: rgba(0, 0, 0, 0.6);
+}
+.nav2-links:hover{
+font-size: 14px;
+font-weight: 600;
+color: rgba(0, 0, 0, 0.9);
+}
+    </style>
+<body>
+    <nav style="position: sticky; top: 0px; z-index: 2000; background-color: white;">
+        <nav class="navbar">
+            <main class="container ">
+                <div>
+                    <img src="images/logo.png" width="25px">
+                    <span class="learn">LEARNING</span>
+                </div>
+                <div>
+                    <i class="fa fa-bars ml-3"></i>
+                    <p>Browse</p>
+                </div>
+                <div class="love" onclick="Tumi()" id="value">
+                    <div class="not">
+                        <i class="fa fa-search pl-1" id="icon" style="padding:8.5px;"></i>
+                        <input type="text" id="stu"  placeholder="Search for skills, subjects or software">
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <section class="d-flex">
+                    <div class="p-3">
+                        <a href="#" class="lagos">
+                            <div class="help">
+                                <i class="fa fa-home" style="font-size: 20px; padding-left: 5px;"></i>
+                                <span>Home</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-3">
+                        <a href="#" class="lagos">
+                            <div class="help">
+                                <i class="fa fa-columns" style="font-size: 20px; padding-left: 5px;"></i>
+                                <span>Learning</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="dropdown p-3 pt-2">
+                        <img src="images/mourinho.jpg" alt="" style="width: 25px; height: 25px; border-radius: 100%;"><br>
+                        <a href="#"class=" a dropdown-toggle lagos"  type="link" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Me  
+                        </a>
+                        <ul class="dropdown-menu shadow-sm  " aria-labelledby="dropdownMenuButton1" style="width: 230px;">
+                            <section class="d-flex justify-content-between" style="padding: 15px 15px 0px 15px;">
+                                <div>
+                                    <img src="images/mourinho.jpg" style="width: 60px; height: 60px; border-radius: 100%;">
+                                </div>
+                                <div>
+                                    <h6>Opeyemi Adewumi</h6>
+                                    <p>Personal Account</p>
+                                </div>
+                            </section><hr>
+                          <li><a class="dropdown-item" href="#">My Learning</a></li>
+                          <li><a class="dropdown-item" href="#">In Progress</a></li>
+                          <li><a class="dropdown-item" href="#">Saved</a></li>
+                          <li><a class="dropdown-item" href="#">Collections</a></li>
+                          <li><a class="dropdown-item" href="#">Learning History</a></li>
+                          <li><a class="dropdown-item" href="#">Skills</a></li>
+                          <hr>
+                          <li><a class="dropdown-item" href="#">Language</a></li>
+                          <li><a class="dropdown-item" href="#">Settings</a></li>
+                          <li><a class="dropdown-item" href="#">Go to Linkedin Profile</a></li>
+                          <li><a class="dropdown-item" href="#">Buy for my team</a></li>
+                          <li><a class="dropdown-item" href="#">Help center</a></li>
+                          <li><a class="dropdown-item" href="#">Sign out.</a></li>
+    
+                        </ul>
+                    </div>
+                    <div class="dropdown p-3 pt-2">
+                        <i class="fa fa-globe" style="font-size: 20px; padding-left: 5px;"></i><br>
+                        <a href="#"class=" a dropdown-toggle lagos"  type="link" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          EN
+                        </a>
+                        <ul class="dropdown-menu shadow-sm  " aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Language</a></li>
+                          <li><a class="dropdown-item" href="#">English (English)</a></li>
+                          <li><a class="dropdown-item" href="#">Espanol (Spanish)</a></li>
+                          <li><a class="dropdown-item" href="#">Francais (French)</a></li>
+                          <li><a class="dropdown-item" href="#">Deutsch (German)</a></li>
+                          <li><a class="dropdown-item" href="#">日本 (Japanese)</a></li>
+                          <li><a class="dropdown-item" href="#">华语 / 華語 (Simplified Chinese)</a></li>
+                          <li><a class="dropdown-item" href="#">português (Portuguese)</a></li>
+    
+                        </ul>
+                    </div>
+                </section>
+                <div>
+                    <button class="number">Start my free month</button>
+                </div>
+                <!-- <input type="text" class="form-control w-50" onclick="Tumi()"> -->
+                <p id="yes"></p>
+            </main>
+        </nav>
+        <section id="up" class="shadow-sm">
+            <div class="container d-flex justify-content-end">
+                <div class="none">
+                    Solutions for:
+                </div>
+                <a href="#" class="nav2-links"> Business </a> 
+                <a href="#" class="nav2-links"> Higher Education </a>
+                <a href="#" class="nav2-links"> Government </a>
+                <span style="padding: 5px 10px 5px 10px;"> | </span>
+                <a href="#" class="nav2-links"> Buy for my team </a> 
+            </div>
+        </section>
+    
+    </nav>
+    <h2>My Learning</h2>
+    <button class="tablink" onclick="openPage('Home', this, 'white')" id="defaultOpen">In Progress (1)</button>
+    <button class="tablink" onclick="openPage('News', this, 'white')" >Saved</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'white')">My Collections</button>
+    <button class="tablink" onclick="openPage('About', this, 'white')">Learning History (1)</button>
+    <button class="tablink" onclick="openPage('About', this, 'white')">Skills</button>
+
+
+    <div id="Home" class="tabcontent d-flex justify-content-around">
+        <div class="card" style="width: 200px; height: 130px;">
+            <img src="images/hendo.png" width="100%" height="100%">
+            <span class="bg-dark text-white px-2" style="position: absolute; z-index: 5; top: 81%; left: 53%; opacity: 0.7">15h</span>
+        </div>
+        <div>
+            <p>LEARNING PATH</p>
+            <h4><a href="">Become a Data Scientist</a></h4>
+            <button class="btn-white w-25" style="border-radius: 10px;"></button>
+            <span>15h 24m 55s left</span>
+        </div>
+    </div>
+
+    <div id="News" class="tabcontent">
+        <h3>News</h3>
+        <p>Some news this fine day!</p> 
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+    <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+
+    <script>
+    function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>

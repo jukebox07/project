@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/logo.png">  
+</head>
+<style>
+.be{
+    transition: all 0.4s;
+    flex-grow: 1 !important;
+    outline: none;
+    background-color: rgb(243,242,239);
+
+}
+.be:hover{
+        flex-grow: 3 !important;
+        z-index: 4000 ;
+        transform: scale(1.3);
+        background-color: white;
+}
+.be:hover .txt-style{
+    display: inherit;
+    font-size: small;
+    padding: 5px;
+
+}
+.be .txt-style{
+    display: none;
+}
+.be ::-webkit-scrollbar{
+    border-radius: 70px;
+}
+.number{
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.7);
+	border: none;
+	background-color: white;
+	height: 40px;
+}
+.number:hover{
+	background-color: #F3F3F3;
+	color: rgba(0, 0, 0, 0.894);
+}
+.learn{
+	letter-spacing: 3px;
+	padding-left: 3px;
+	font-size: 16px;
+	font-weight: 600;
+}
+input{
+	border: none;
+	/* width: 330px; */
+	/* height: 40px; */
+	background-color: #E9E9E9;
+	padding-left: 5px;
+	width: 90%;
+	outline: none;
+}
+.love{
+	width: 330px;
+	height: 40px;
+	background-color: #E9E9E9;
+	border-radius: 5px;
+	padding-top:5px ;
+	border: 1px solid lightblue;
+}
+/* .not{
+	padding-top: 5px;
+	width: 330px;
+	height: 40px;
+} */
+.help{
+	display: flex;
+	flex-flow: column nowrap;
+}
+.div{
+width: 85px; 
+height: 55px; 
+border-radius: 100%;
+overflow: hidden;
+}
+
+.yes{
+background-color: white;
+border: 1px solid lightgray;
+width: 330px;
+height: 560px;
+margin-top: -25px;
+margin-left: 310px;
+border-radius: 3px;
+overflow-y: scroll;
+display: none;
+}
+.lagos{
+text-decoration: none;
+color: rgb(65, 62, 62);
+font-size: 14px;
+}
+#up{
+margin-top: -15px;
+background-color: rgb(243,246,248);
+position: sticky;
+top: 40px; 
+z-index: 4;  
+height: 40px;
+border: 1px solid lightgray;
+}
+.nav2-links{
+text-decoration: none;
+color: rgb(88, 84, 84);
+padding: 5px 10px 5px 10px;
+font-size: 14px;
+}
+.none{
+padding: 5px 10px 5px 10px; 
+font-size: 14px;
+font-weight: 400;
+color: rgba(0, 0, 0, 0.6);
+}
+.nav2-links:hover{
+font-size: 14px;
+font-weight: 600;
+color: rgba(0, 0, 0, 0.9);
+}
+.ac {
+    background-color: #EBEFF1;
+    outline: none;
+  }
+  .ac:hover {
+    outline: 1px solid #0A66C2;
+    background-color: white;
+  }
+
+  .ae {
+    background-color: #EBEFF1;
+  }
+  .ae:hover {
+    background-color: white;
+  }
+
+  .top-a {
+    color: #0A66C2;
+  }
+
+  .ad {
+    border: none;
+    width: 300px;
+    height: 38px;
+    outline: none;
+    padding: 5px;
+  }
+
+  .content-ad {
+    border: none;
+    width: 350px;
+    outline: none;
+  }
+
+  .i-indent {
+    padding-top: 15px;
+    margin-right: 15px;
+  }
+
+  .i-span {
+    font-size: 12px;
+    color: gray;
+  }
+
+  .div-span1 {
+    font-size: 14px;
+  }
+
+  li .div-span {
+    font-size: 12px;
+  }
+  @media  (max-width: 769px) {
+      #up{
+          display: none;
+      }
+      .no{
+          display: block;
+      }
+  }
+ </style>
+<body>
+   
+    <nav style="position: sticky; top: 0px; z-index: 2000; background-color: white;">
+        <nav class="navbar">
+            <main class="container d-flex ">
+                <div>
+                    <img src="images/logo.png" width="25px">
+                    <span class="learn">LEARNING</span>
+                </div>
+                 <nav class="navbar navbar-expand-sm no">
+                    <div class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div class="collapse navbar-collapse" id="menu">
+                        <div>
+                            <i class="fa fa-bars ml-3"></i>
+                            <p>Browse</p>
+                        </div>
+                        <div class=" dropdown ac">
+                            <input type="text" placeholder="Search skills, subjects, or software" class="ae ad dropdown-toggle" type="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a href="#" class=" ae">
+                                <i class="fa fa-search btn"></i>
+                            </a>
+                            <ul class="dropdown-menu content-ad border-0  shadow" aria-labelledby="dropdownMenuLink" style="overflow-y: scroll;">                    
+                                <li><button href="#" class="top-a dropdown-item " type="button">Browse by topic</button></li>
+                                <hr>                            
+                                <li><span href="#" class="dropdown-item-text div-span" type="text"> Trending business topics</span></li>
+                                <li>
+                                    <button href="#" class="dropdown-item d-flex" type="button">
+                                        <i class="fa fa-indent i-indent "></i>
+                                        <div>
+                                            <span class="div-span1">Leadership and Management</span> <br>
+                                            <span class="i-span">910 course results</span>
+                                        </div>
+                                    </button>
+                                    <button href="#" class="dropdown-item d-flex" type="button">
+                                        <i class="fa fa-indent i-indent "></i>
+                                        <div>
+                                            <span class="div-span1">Professional Development</span> <br>
+                                            <span class="i-span">872 course results</span>
+                                        </div>
+                                    </button>
+                                    <button href="#" class="dropdown-item d-flex" type="button">
+                                        <i class="fa fa-indent i-indent "></i>
+                                        <div>
+                                            <span class="div-span1">Business Software and Tools</span> <br>
+                                            <span class="i-span">836 course results</span>
+                                        </div>
+                                    </button><hr>
+                                <li><span href="#" class="dropdown-item-text div-span" type="text"> Trending creative topics</span></li>
+                                    <button href="#" class="dropdown-item d-flex" type="button">
+                                        <i class="fa fa-indent i-indent "></i>
+                                        <div>
+                                            <span class="div-span1">Graphics Design</span> <br>
+                                            <span class="i-span">568 course results</span>
+                                        </div>
+                                    </button>
+                                    <button href="#" class="dropdown-item d-flex" type="button">
+                                        <i class="fa fa-indent i-indent "></i>
+                                        <div>
+                                            <span class="div-span1">AEC</span> <br>
+                                            <span class="i-span">774 course results</span>
+                                        </div>
+                                    </button>
+                                    <button href="#" class="dropdown-item d-flex" type="button">
+                                        <i class="fa fa-indent i-indent "></i>
+                                        <div>
+                                            <span class="div-span1">Photography</span> <br>
+                                            <span class="i-span">502 course results</span>
+                                        </div>
+                                    </button><hr>
+                                <li><span href="#" class="dropdown-item-text div-span" type="text"> Trending technology topics</span></li>
+                                    <button href="#" class="dropdown-item d-flex" type="button">
+                                        <i class="fa fa-indent i-indent "></i>
+                                        <div>
+                                            <span class="div-span1">Data Science</span> <br>
+                                            <span class="i-span">533 course results</span>
+                                        </div>
+                                    </button>
+                                    <button href="#" class="dropdown-item d-flex" type="button">
+                                        <i class="fa fa-indent i-indent "></i>
+                                        <div>
+                                            <span class="div-span1">Software Development</span> <br>
+                                            <span class="i-span">804 course results</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li><button href="#" class="dropdown-item text-success " type="button">Learning</button></li>
+                            </ul>                   
+                        </div>
+                        <section class="d-flex">
+                            <div class="p-3">
+                                <a href="#" class="lagos">
+                                    <div class="help">
+                                        <i class="fa fa-home" style="font-size: 20px; padding-left: 5px;"></i>
+                                        <span>Home</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-3">
+                                <a href="#" class="lagos">
+                                    <div class="help">
+                                        <i class="fa fa-columns" style="font-size: 20px; padding-left: 5px;"></i>
+                                        <span>Learning</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="dropdown p-3 pt-2">
+                                <img src="images/mourinho.jpg" alt="" style="width: 25px; height: 25px; border-radius: 100%;"><br>
+                                <a href="#"class=" a dropdown-toggle lagos"  type="link" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Me  
+                                </a>
+                                <ul class="dropdown-menu shadow-sm  " aria-labelledby="dropdownMenuButton1" style="width: 230px;">
+                                    <section class="d-flex justify-content-between" style="padding: 15px 15px 0px 15px;">
+                                        <div>
+                                            <img src="images/mourinho.jpg" style="width: 60px; height: 60px; border-radius: 100%;">
+                                        </div>
+                                        <div>
+                                            <h6>Opeyemi Adewumi</h6>
+                                            <p>Personal Account</p>
+                                        </div>
+                                    </section><hr>
+                                  <li><a class="dropdown-item" href="#">My Learning</a></li>
+                                  <li><a class="dropdown-item" href="#">In Progress</a></li>
+                                  <li><a class="dropdown-item" href="#">Saved</a></li>
+                                  <li><a class="dropdown-item" href="#">Collections</a></li>
+                                  <li><a class="dropdown-item" href="#">Learning History</a></li>
+                                  <li><a class="dropdown-item" href="#">Skills</a></li>
+                                  <hr>
+                                  <li><a class="dropdown-item" href="#">Language</a></li>
+                                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                                  <li><a class="dropdown-item" href="#">Go to Linkedin Profile</a></li>
+                                  <li><a class="dropdown-item" href="#">Buy for my team</a></li>
+                                  <li><a class="dropdown-item" href="#">Help center</a></li>
+                                  <li><a class="dropdown-item" href="#">Sign out.</a></li>
+            
+                                </ul>
+                            </div>
+                            <div class="dropdown p-3 pt-2">
+                                <i class="fa fa-globe" style="font-size: 20px; padding-left: 5px;"></i><br>
+                                <a href="#"class=" a dropdown-toggle lagos"  type="link" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  EN
+                                </a>
+                                <ul class="dropdown-menu shadow-sm  " aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">Language</a></li>
+                                  <li><a class="dropdown-item" href="#">English (English)</a></li>
+                                  <li><a class="dropdown-item" href="#">Espanol (Spanish)</a></li>
+                                  <li><a class="dropdown-item" href="#">Francais (French)</a></li>
+                                  <li><a class="dropdown-item" href="#">Deutsch (German)</a></li>
+                                  <li><a class="dropdown-item" href="#">日本 (Japanese)</a></li>
+                                  <li><a class="dropdown-item" href="#">华语 / 華語 (Simplified Chinese)</a></li>
+                                  <li><a class="dropdown-item" href="#">português (Portuguese)</a></li>
+            
+                                </ul>
+                            </div>
+                        </section>
+                        <div>
+                            <button class="number">Start my free month</button>
+                        </div>
+                   </div>        
+                </nav> 
+            </main>
+        </nav>
+        <section id="up" class="shadow-sm">
+            <div class="container d-flex justify-content-end">
+                <div class="none">
+                    Solutions for:
+                </div>
+                <a href="#" class="nav2-links"> Business </a> 
+                <a href="#" class="nav2-links"> Higher Education </a>
+                <a href="#" class="nav2-links"> Government </a>
+                <span style="padding: 5px 10px 5px 10px;"> | </span>
+                <a href="#" class="nav2-links"> Buy for my team </a> 
+            </div>
+        </section>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9" style="line-height: 60px;">
+                <h2>OPEYEMI, grow your skills and advance your career with<br> LinkedIn Learning</h2>
+                <img src="images/hendo.png" width="30px" height="30px" style="border-radius: 100%;">
+                <img src="images/linkedin.png" width="30px" height="30px" style="border-radius: 100%; position: absolute; left: 25px; top: 102px;">
+                <span class="pl-3">Millions of members are on LinkedIn Learning</span><br>
+                <button class="btn btn-primary text-white" style="background-color: rgb(0,115,177);">Start my free month</button><br>
+                <a href="" style="color: rgb(0,115,177);">Need to train your team? Learn More.</a>
+            </div>
+            <div class="col-sm-3">
+                <img src="images/linkedin.png" width="101%">
+            </div>
+        </div>
+    </div>
+    <main style="background-color: rgb(243,242,239);">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll; overflow-y: hidden;">
+                <div class="be mx-4 ">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                    <p class="txt-style">
+                        By: Khaulat Ayomide Abdulhakeem<br>Are you a recent graduate struggling with securing a job after graduation? What have you tried? What questions do you have? I'll be talking... <br>1,140 interested
+                    </p>
+                </div>
+                <div class="mx-4 be">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                    <p class="txt-style">
+                        By: Khaulat Ayomide Abdulhakeem<br>Are you a recent graduate struggling with securing a job after graduation? What have you tried? What questions do you have? I'll be talking... <br>1,140 interested
+                    </p>
+                </div>
+                <div class="mx-4 be">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                    <p class="txt-style">
+                        By: Khaulat Ayomide Abdulhakeem<br>Are you a recent graduate struggling with securing a job after graduation? What have you tried? What questions do you have? I'll be talking... <br>1,140 interested
+                    </p>
+                </div>
+                 <div class="mx-4 be">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                    <p class="txt-style">
+                        By: Khaulat Ayomide Abdulhakeem<br>Are you a recent graduate struggling with securing a job after graduation? What have you tried? What questions do you have? I'll be talking... <br>1,140 interested
+                    </p>
+                 </div>
+                <div class="mx-4 be">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                    <p class="txt-style">
+                        By: Khaulat Ayomide Abdulhakeem<br>Are you a recent graduate struggling with securing a job after graduation? What have you tried? What questions do you have? I'll be talking... <br>1,140 interested
+                    </p>
+                </div>
+               <div class="mx-4 be">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                    <p class="txt-style">
+                        By: Khaulat Ayomide Abdulhakeem<br>Are you a recent graduate struggling with securing a job after graduation? What have you tried? What questions do you have? I'll be talking... <br>1,140 interested
+                    </p>
+               </div>
+               <div class="mx-4 be">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                    <p class="txt-style">
+                        By: Khaulat Ayomide Abdulhakeem<br>Are you a recent graduate struggling with securing a job after graduation? What have you tried? What questions do you have? I'll be talking... <br>1,140 interested
+                    </p>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="container card my-5">
+        <div class="row">
+            <h4>Get the most common skills in Nigeria</h4>
+            <div class="col-8" style="display: flex; flex-wrap: wrap;">
+                <div style="border: 1px solid; width: 40%;" class="m-2">
+                    <span>2 Engineering</span><span>Explore</span>
+                </div>
+                <div style="border: 1px solid; width: 40%;" class="m-2">
+                    <span>2 Engineering</span><span>Explore</span>
+                </div>
+                <div style="border: 1px solid; width: 40%;" class="m-2">
+                    <span>2 Engineering</span><span>Explore</span>
+                </div>
+                <div style="border: 1px solid; width: 40%;" class="m-2">
+                    <span>2 Engineering</span><span>Explore</span>
+                </div>
+                <div style="border: 1px solid; width: 40%;" class="m-2">
+                    <span>1 Engineering</span><span>Explore</span>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="images/linkedin2.png" width="100%">
+            </div>
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div class="">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <main class="py-5">
+        <div class="container pb-5">
+            <h2>Live office hours with experts</h2>
+            <section class="d-flex" style="overflow-x: scroll;">
+                <div>
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1 " style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7;">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+                 <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                 </div>
+                <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                        <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                        <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                        <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+                </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;" >
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+               <div class="ml-4">
+                    <div class="card" style="min-width: 250px; height: 130px;">
+                         <img src="images/hendo.png" width="190px" height="100%" style="margin-left: 30px;">
+                         <span class="bg-danger text-white px-2" style="position:absolute; left: 2%;top:2%;" >TODAY</span>
+                         <span class="bg-dark text-white px-1" style="position: absolute; z-index: 5; top: 82%; left: 56%; opacity: 0.7">Jul 22, 4:00PM</span>
+                    </div>
+                    <p>EVENT</p>
+                    <h6>Mindset Matters: Career Lessons,<br>Advice & Tips with Jessica Chen</h6>
+               </div>
+            </section >
+        </div>
+    </main>
+    <hr>
+    <footer class="text-center">
+        Language: English   About  Become an Instructor  Buy for my team  Help  Privacy & Terms   Accessibility  Apps 
+        <p> <img src="images/Capture.PNG"> LinkedIn Corporation © 2021</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<style>
+    #display{
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 100px;
+    }
+</style>
+<body>
+     <!-- <input type="text" placeholder="front" id="me" >
+    <input type="text" placeholder="back" id="you">
+    <input type="text" placeholder="index number" id="him">
+    <button onclick="show()">add</button>
+    <button onclick="pi(me.value,you.value)">delete</button> -->
+     <!-- <input type="text" id="start"> 
+    <input type="text" id="end" onkeyup="finish()">  -->
+    <!-- <input type="text" id="num">
+    <button onclick="enter()">click me</button> -->
+    <input type="text" id="start">
+    <input type="text" id="end">
+    <button onclick="move()">run</button>
+    <div id="display">
+        
+
+    </div>
+
+    
+
+    <script>
+//         let firstname="teslim"
+//     alert(firstname)
+//     firstname="john"
+//     console.log(firstname)
+//     let first_name="yemi"
+//     let _2ndName="henry"
+//     let e_mail="elgizzy49@yahoo.com"
+//     console.log(first_name + " " + _2ndName + " " +e_mail)
+//    let c=typeof _2ndName;
+//     console.log(c)
+//     let department="Marketing";
+//     let phone_number= "07061942355";
+//     let rain= false;
+//     let car={name:"toyota", year: 2014, model:"camry"};
+//     let staff_id=034;
+//     let type_of_dep= typeof department;
+//     let type_of_phone=typeof phone_number;
+//     let type_of_rain=typeof rain;
+//     let type_of_car=typeof car;
+//     let type_of_staff_id=typeof staff_id
+//     console.log(type_of_dep + " "+type_of_phone+" "+ type_of_rain+" "+type_of_car+" "+type_of_staff_id)
+    
+//     let a=4;
+//     a+=9
+//     console.log(a)
+
+//     let e="30";
+//     let f=30;
+//     let g=f!==e
+//     console.log(g)
+    
+// var month=8
+//  if(month==1){
+//      console.log("January");
+//  }else if(month==2){
+//      console.log("February");
+// }else if(month==3){
+//     console.log("March");
+// }else if(month==4){
+//     console.log("April");
+// }else if(month==5){
+//     console.log("May");
+// }else if(month==6){
+//     console.log("June");
+// }else if(month==7){
+//     console.log("July");
+// }else if(month==8){
+//     console.log("August");
+// }else if(month==9){
+//     console.log("September");
+// }else if(month==10){
+//     console.log("October");
+// }else if(month==11){
+//     console.log("November");
+// }else if(month==12){
+//     console.log("December");
+// } else{
+//     console.log("rubbish entry");
+// }
+
+
+
+    
+// function show(num1,num2,op) {
+//     let ans=""
+    
+//     if(op=="+"){
+//         ans = num1+num2  ;
+//     }
+//     else if(op=="/"){
+//         ans = num1/num2;
+//     }
+//     else if(op=="*"){
+//         ans = num1 * num2
+//     }
+//     else if(op=="-"){
+//         ans = num1 - num2;
+//     }
+//     else{
+//         ans = "nonsense!"
+//     }
+//     function greet(ans) {
+//     console.log("ans is "+ ans)
+// }
+//     greet(ans)
+
+// }
+
+// show(10,40,"-")
+// show(10,40,"*")
+// show(10,40,"/")
+// show(10,40,"*")
+// show(12,56,9)
+
+// let r='ope'
+// let i='adewumi'
+// let f=`${r} ${i} ${7*9}`
+// console.log(f)
+// let  cars=['Mercedes','KIA','Audi'];
+
+// let a=document.getElementById('you')
+// let  b=document.getElementById('me')
+
+// function show(params) {
+//    if (a.value != '' && b.value != '') {
+//     getty(a,b)
+//    } 
+// else {
+//     console.log(cars);
+//    }
+// }
+// function getty(a1,b1) {
+//     cars.push(a.value)
+//     cars.unshift(b.value)
+//     console.log(cars); 
+     
+// }
+
+// function show(params) {
+//     if (b.value) {
+//     // document.getElementById('you').value = ''
+//     // document.getElementById('me').value = ''
+//     // cars.push(a)
+//     // cars.unshift(b)
+//     console.log(b.value);
+//     }
+// // }
+// function pi() {
+//     c=document.getElementById('him').value
+//    cars.splice(c,1)
+//    console.log(cars)
+// // getty(p,q)
+
+// }
+    //  for (let i=0; i<=10; i++ ){
+    //      console.log(i);
+    // //  }
+    // let come = 5;
+        
+    // function finish(params) {
+    //     let a= Number(document.getElementById('start').value)
+    //     let b= Number (document.getElementById('end').value)
+         
+    //     for (let index = a; index <=b; index++) {
+    //         ans=come*index
+    //      document.getElementById("display").innerHTML+=`${index}*${come} = ${ans}  <br>`;
+            
+             
+    //      }
+        
+    //  }
+    //  let fruits=['go','me','you','he']
+    //  for (let index = 0; index <fruits.length; index++) {
+    //      console.log(fruits[index])
+         
+    //  }
+    // document.write('Let us begin')
+    // print()
+    // function enter(params) {
+    // let a=" ";
+    //     a=Number(document.getElementById('num').value)
+    //     for (let index = 0; index <=10; index++) {
+    //         ans=a*index
+    //      document.getElementById("display").innerHTML+=`${index}*${a} = ${ans}  <br>`;
+            
+             
+    //     }
+    // }
+    
+    
+    
+    function move(params) {
+        d=display.innerHTML=''
+         a=Number(document.getElementById('start').value)
+         b=Number(document.getElementById('end').value)
+        for (let c = a; c <=b; c++) {  
+            for (let index = 1; index <=12; index++) {
+          ans=c*index      
+                
+       display.innerHTML+=`${c}*${index} = ${ans}&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <br>`;
+                
+            }
+
+     d=display.innerHTML+=`<p></p><br>`
+        }
+        
+     }
+    </script>
+</body>
+</html>

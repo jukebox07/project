@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      tr,
+      td {
+        border: 2px solid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="text" placeholder="name" id="on" />
+    <input type="text" placeholder="number" id="no" />
+    <input type="email" placeholder="email" id="me" />
+    <input type="text" placeholder="department" id="you" />
+    <button onclick="add()">Add Up</button>
+    <table id="get">
+      <!-- <tr>
+            <th style="border-top: none;">Name</th>
+            <th style="border-top: none;">contact_number</th>
+            <th style="border-top: none;">email</th>
+            <th style="border-top: none;">department</th>
+        </tr> -->
+    </table>
+  </body>
+</html>
+
+<script>
+  let tableOutput = document.getElementById("get");
+
+  let details = [
+    {
+      Name: "Teslim",
+      contact_number: "198756784",
+      email: "tamali@gmail.com",
+      department: "robotics",
+    },
+    {
+      Name: "Samson",
+      contact_number: "098756756",
+      email: "sam@gmail.com",
+      department: "software engineering",
+    },
+    {
+      Name: "Tumi",
+      contact_number: "094556784",
+      email: "tumi@gmail.com",
+      department: "OTM",
+    },
+    {
+      Name: "Femi",
+      contact_number: "098700784",
+      email: "femi@gmail.com",
+      department: "graphics design",
+    },
+    {
+      Name: "Elijah",
+      contact_number: "098576784",
+      email: "elijah@gmail.com",
+      department: "OTM",
+    },
+    {
+      Name: "Veronica",
+      contact_number: "098756734",
+      email: "veronica@gmail.com",
+      department: "robotics",
+    },
+    {
+      Name: "Leke",
+      contact_number: "096656784",
+      email: "leke@gmail.com",
+      department: "Artificial Intelligence",
+    },
+    {
+      Name: "Jide",
+      contact_number: "098756994",
+      email: "jide@gmail.com",
+      department: "Data science",
+    },
+    {
+      Name: "Ope",
+      contact_number: "092256784",
+      email: "ope@gmail.com",
+      department: "UI/UX",
+    },
+  ];
+
+  function del(params) {
+    details.splice(params, 1);
+    tableOutput.innerHTML = "";
+    show();
+  }
+
+  show();
+  function add(params) {
+    Name = document.getElementById("on").value;
+    contact_number = document.getElementById("no").value;
+    email = document.getElementById("me").value;
+    department = document.getElementById("you").value;
+    let student = { Name, contact_number, email, department };
+    details.push(student);
+    tableOutput.innerHTML = "";
+    show();
+  }
+
+  function show(params) {
+    tableOutput.innerHTML += `<tr> 
+            <th style="border-top: none;">S/N</th>
+            <th style="border-top: none;">Name</th>
+            <th style="border-top: none;">contact_number</th>
+            <th style="border-top: none;">email</th>
+            <th style="border-top: none;">department</th>
+            <th style="border-top: none;">ACTION</th>
+</tr>`;
+    for (let i = 0; i < details.length; i++) {
+      tableOutput.innerHTML += `
+         <tr>
+           <td>${i + 1}</td>
+           <td>${details[i].Name}</td>
+           <td>${details[i].contact_number}</td>
+           <td>${details[i].email}</td>
+           <td>${details[i].department}</td>
+           <td><button class="btn btn-danger" onclick="del(${i})" >delete</button></td>
+       </tr>
+       `;
+    }
+  }
+</script>
+
+<!-- <script> 
+    var name;
+    var email;
+    var dept;
+    var phone;
+
+    var student = { name, email, dept, phone }
+    let details = []
+    details.push(student)
+
+</script> -->

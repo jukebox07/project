@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--    
+           <button onclick="show()">Believe me </button>
+           <input type="text" id="goat" onkeyup="show()">
+           <!-<input type="text" id="rat">
+           <input type="text" id="ope"> 
+           <input type="text" id="tumi">
+          <input type="text" id="hen"> -->
+    <!-- <p id="no"></p>
+           <h1 id="ram"></h1>
+
+        <h1 onmouseover="get()" onmouseout  ="unget()"  id="demo">JUNGLE</h1> -->
+    <div>
+      <input type="text" id="me" />
+    </div>
+    <div>
+      <input type="text" id="on" />
+    </div>
+    <div>
+      <input type="text" id="be" />
+    </div>
+    <div>
+      <button onclick="get()">Calculate</button>
+    </div>
+  </body>
+</html>
+<script>
+  // let a=13
+  // let b=12
+  //    a == b? console.log("yes") : console.log("no")
+  //    function eat(c,d,e) {
+  //        let ans=""
+  //        if(e=="+"){
+  //         ans=c+d
+  //        }
+  //        else if(e=="-"){
+  //         ans=c-d
+  //        }
+  //        else if(e=="*"){
+  //         ans=c*d
+  //        }
+  //        else if(e=="/"){
+  //         ans=c/d
+  //        }
+  //        else{
+  //         ans='love'
+
+  //        }
+  //     function hgj(ans) {
+  //         alert(ans)
+  //     }
+  //     hgj(ans)
+  //     }
+
+  //    eat(7,9,"+")
+  // //    eat(0.11111,3.33333,'%')
+  //    function tumi(a,b) {
+
+  //        console.log(a+b)
+  // //        console.log(a-b)
+  // //        console.log(a*b)
+  // //        console.log(a/b)
+  // //    }
+  // //    tumi(1,2)
+  // function show() {
+  //     let a=document.getElementById('goat').value;
+  //     document.getElementById('ram').innerText=a
+  //     // document.getElementById('rat').value=a
+  //     // document.getElementById('ope').value=a
+  //     // document.getElementById('tumi').value=a
+  //     // document.getElementById('hen').value=a
+  //     document.getElementById('no').innerText=a
+  //     // document.getElementById('no').innerHTML="<i>help</i>"
+
+  // }
+
+  //     function get() {
+  //         document.getElementById("demo").innerHTML="<u><i>JUNGLE</i></u>"
+
+  //     }
+  //     function unget(){
+  //                 document.getElementById("demo").innerHTML="JUNGLE"
+  //     }
+  //     setTimeout(()=>{
+  //         get()}, 9000);
+
+  function get(params) {
+    let a = Number(me.value);
+    let b = Number(on.value);
+    let c = be.value;
+    //   let ans=""  ;
+    if (c === "+") {
+      ans = a + b;
+    } else if (c == "-") {
+      ans = a - b;
+    } else if (c == "*") {
+      ans = a * b;
+    } else if (c == "/") {
+      ans = a / b;
+    } else {
+      ans = "rubbishness";
+    }
+    yes.innerText = ` The answer is ${ans}`;
+    document.getElementById("yes").innerHTML = `<i>The answer is ${ans}</i>`;
+  }
+  //    let a='Jude Adewumi';
+  //    console.log(a.length)
+  //    let b=a.slice(3,9)
+  //    let c=a.slice(3)
+  //    let d=a.slice(-3)
+  //    let e=a.substring(3)
+  //    let f=a.includes('mi')
+  //    let g=a.includes('Mi')
+  //    let h=a.toLowerCase()
+  //    let i=a.toUpperCase()
+  //    let j=a.split('')
+  //    let k=a.split(',')
+  //    let l=100
+  //    let m=l+""
+  //    let n=l.toString()
+  //    let o="35.9"
+  //    let p=Number(o)
+  //    let q=Math.floor(o)
+  //    let r=Math.round(o)
+  //    let s=Math.sqrt(o)
+  //    let t=Math.random()
+  //    let u=Math.floor(Math.random()*100)
+
+  //    console.log(a)
+  //    console.log(b)
+  //    console.log(c)
+  //    console.log(d)
+  //    console.log(e)
+  //    console.log(f)
+  //    console.log(g)
+  //    console.log(h)
+  //    console.log(i)
+  //    console.log(j)
+  //    console.log(k)
+  //    console.log(l)
+  //    console.log(m)
+  //    console.log(n)
+  //    console.log (typeof(n))
+  //    console.log (typeof(m))
+  //    console.log (typeof(l))
+  //    console.log(o)
+  //    console.log(typeof(o))
+  //    console.log(p)
+  //    console.log(q)
+  //    console.log(r)
+  //    console.log(s)
+  //    console.log(t)
+  //    console.log(u)
+
+  let a = function pi(params) {
+    alert("we're here");
+  };
+
+  let fruits = [
+    "mango",
+    "orange",
+    "apple",
+    {
+      name: "teslim",
+      phone: "1234567",
+      hobbies: ["swimming", "coding", "travelling"],
+    },
+    a,
+  ];
+
+  console.log(fruits[4]());
+  console.log(fruits[3].hobbies[2]);
+  console.log(fruits[3].name);
+  fruits.pop();
+  console.log(fruits);
+  let b = fruits.unshift();
+  console.log(b);
+  let c = fruits.shift();
+  console.log(c);
+  let d = fruits.slice(1);
+  console.log(d);
+  let e = fruits.splice(1, 2);
+  console.log(e);
+  let f = fruits.reverse();
+  console.log(f);
+  let g = fruits.sort();
+  console.log(g);
+</script>

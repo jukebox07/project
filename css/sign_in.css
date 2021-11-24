@@ -1,0 +1,98 @@
+.logo {
+  margin: auto;
+  display: flex;
+  width: 170px;
+  height: 30px;
+}
+.sign_in {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 30px;
+}
+.sign-up {
+  text-align: center;
+}
+#email {
+  width: 400px;
+  margin: 20px 0px 10px 37%;
+  border: 1px solid black;
+  outline: 1px solid#3E6B84;
+  padding: 10px;
+}
+.btnn {
+  background-color: #a6cee4;
+  width: 400px;
+  border: 1px solid #a6cee4;
+  border-radius: 4px;
+  height: 50px;
+  margin: 20px 0px 10px 37%;
+}
+.px-2 {
+  text-decoration: none;
+}
+.px-2:hover {
+  text-decoration: underline;
+}
+
+.lib-card {
+  text-align: center;
+  color: #0073b3;
+  text-decoration: none;
+}
+.cards {
+  text-align: center;
+  color: #0073b3;
+  text-decoration: none;
+}
+.new,
+.text {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  #email {
+    width: 300px;
+    margin: 0px 0px 10px 6%;
+    outline: 1px solid#3E6B84;
+    padding: 8px;
+    align-items: center;
+  }
+  .btnn {
+    background-color: #a6cee4;
+    width: 300px;
+    border: 1px solid #a6cee4;
+    border-radius: 4px;
+    height: 50px;
+    margin: 0px 0px 10px 6%;
+  }
+  .sign-up {
+    font-size: 15px;
+    margin-left: 25px;
+    width: 300px;
+  }
+  .sign_in {
+    font-size: 27px;
+    margin-left: 70px;
+    /* width: 300px; */
+  }
+  .logo {
+    margin-left: 90px;
+  }
+  form {
+    padding: 10px;
+    width: 300px;
+  }
+  .text,
+  hr {
+    display: none;
+  }
+  .cards {
+    margin-left: 60px;
+    color: #0073b3;
+    text-decoration: none;
+  }
+  .new,
+  .lib-cards {
+    margin-left: 80px;
+  }
+}

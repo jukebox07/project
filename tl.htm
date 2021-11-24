@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <style></style>
+  <body>
+    <h3 id="typing" class="text-primary bg-danger"></h3>
+    <button id="stop" class="bg-danger" onclick="pause()">Pause</button>
+  </body>
+</html>
+<script>
+  var fullSpeech = [
+    "This is SQI college of ICT",
+    "You are very welcome",
+    "My name is Gizzy",
+    "I'm struggling at the moment with Javascript",
+  ];
+  // var textOnDisplay = fullSpeech[0];
+  count = 0;
+  index = 0;
+  wc = 0;
+  total = 0;
+
+  // function typin(params) {
+  //   t = setTimeout("work()", 300);
+  // }
+  // function work() {
+  //   typing.innerHTML += fullSpeech[wc].substr(count, 1);
+  //   if (count < fullSpeech[wc].length) {
+  //     typin();
+  //   }
+  //   count++;
+  //   if (count > fullSpeech[wc].length) {
+  //     typin();
+  //     typing.innerHTML = typing.innerHTML.substr(
+  //       0,
+  //       typing.innerHTML.length - 1
+  //     );
+  //   }
+  //   if (typing.innerHTML.length == 0) {
+  //     count = 0;
+  //     wc++;
+  //   }
+  //   if (wc > fullSpeech.length - 1) {
+  //     // console.log(fullSpeech.length);
+  //     clearTimeout(t);
+  //   }
+  //   if (wc == fullSpeech.length) {
+  //     wc = 0;
+  //     typin();
+  //   }
+  // }
+  // typin();
+
+  // let displayOut = document.getElementById("typing");
+
+  // (function type() {
+  // 	let text1 = fullSpeech[0];
+  // 	let text2 = fullSpeech[1];
+  // 	let text3 = fullSpeech[2];
+  // 	textOnDisplay = text1.slice(0, index--);
+  // 	// textOnDisplay = text1.slice(0, count++);
+  // 	displayOut.innerHTML = textOnDisplay;
+  // 	console.log(index);
+  // 	console.log(displayOut.innerHTML);
+  // 	// for (let index = 0; index < fullSpeech.length; index++) {
+
+  // 	// }
+
+  // 	// let text = fullSpeech [index];
+  // 	// allText = text.slice(0, count++);
+  // 	// displayOut.innerHTML = allText;
+  // 	// if (text.length == allText.length) {
+  // 	// 	count = 0;
+  // 	// 	index++;
+  // 	// 	allText = text.slice(0, count++);
+  // 	// }
+  // 	// if (text.length == allText.length) {
+  // 	// 	count = 0;
+  // 	// 	index++;
+  // 	// 	allText = text.slice(index, count++);
+  // 	// }
+  // 	setTimeout(type, 200);
+  //
+  // })
+  function write(params) {
+    if (!fullSpeech[index]) {
+      index = 0;
+      return write();
+    }
+    word = fullSpeech[index];
+    typing.innerHTML += word[count];
+    setTimeout(() => {
+      if (word[count + 1]) {
+        count++;
+        write();
+      } else {
+        setTimeout(() => {
+          erase();
+        }, 3000);
+      }
+    }, 100);
+  }
+  function erase(params) {
+    let word = typing.innerHTML;
+    typing.innerHTML = word.substring(0, word.length - 1);
+    setTimeout(() => {
+      if (typing.innerHTML != "") {
+        erase();
+      } else {
+        index++;
+        count = 0;
+        write();
+      }
+    }, 100);
+  }
+  write();
+  function pause(params) {
+    let word = typing.innerHTML;
+  }
+  function play(params) {}
+</script>
